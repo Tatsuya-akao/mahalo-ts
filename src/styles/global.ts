@@ -1,4 +1,5 @@
 import { css } from "@emotion/react";
+import { color } from "@/styles/vars";
 
 export const global = css`
   @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Archivo+Black&family=Roboto:wght@400;500;700;900&family=Rowdies&display=swap");
@@ -16,6 +17,7 @@ export const global = css`
   }
   body {
     line-height: 1.5;
+    color: ${color.text};
   }
   img,
   picture,

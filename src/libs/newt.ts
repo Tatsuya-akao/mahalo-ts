@@ -12,7 +12,7 @@ export const getArticles = async () => {
     appUid: "news",
     modelUid: "article",
     query: {
-      select: ["_id", "title", "slug", "content"],
+      select: ["_id", "title", "slug", "content", "_sys.raw.publishedAt"],
     },
   });
 

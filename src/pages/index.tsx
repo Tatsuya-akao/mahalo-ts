@@ -1,11 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
-import Hero from "@/components/home/hero";
-import News from "@/components/home/news";
+import Hero from "@/components/home/sections/hero/hero";
+import News from "@/components/home/sections/news/news";
+import Menu from "@/components/home/sections/menu/menu";
+import Access from "@/components/home/sections/access/access";
 import { getArticles } from "@/libs/newt";
 import type { Article } from "@/types/article";
-import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,17 +21,9 @@ export default function Home({ articles }: { articles: Article[] }) {
       </Head>
       <main>
         <Hero />
-
-        <ul>
-          {articles.map((article) => {
-            return (
-              <li key={article._id}>
-                <Link href={`news/${article.slug}`}>{article.title}</Link>
-              </li>
-            );
-          })}
-        </ul>
-        <News />
+        <News articles={articles} />
+        <Menu />
+        <Access />
       </main>
     </>
   );

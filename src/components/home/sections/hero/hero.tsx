@@ -96,6 +96,7 @@ const heroBox = css`
     line-height: 2;
     margin-top: 16px;
     max-width: 400px;
+    letter-spacing: 0.05em;
   }
 `;
 
